@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1064448334889",
+    "project_id": "trinit-fbfe9",
+    "storage_bucket": "trinit-fbfe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064448334889:android:4419e146b2d1bf66fe9038",
+        "android_client_info": {
+          "package_name": "com.example.tri_nit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064448334889-po928nilvqp42eot9t38uem0eknnoteh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLRTJantoNLknRa-yf3gHXV2wHoi1TyP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064448334889-po928nilvqp42eot9t38uem0eknnoteh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
