@@ -16,28 +16,21 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       backgroundColor: Colors.deepOrange[200],
       appBar: AppBar(
+        centerTitle: true,
         title: Text('TRI'),
       ),
-      body:
-
-      Column(
+      body: Column(
         children: <Widget>[
-
           SizedBox(
             height: 20.0,
           ),
-
           Container(
-            margin: EdgeInsets.only(left: 20.0,right: 20.0),
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
             child: ElevatedButton(
-
-
               style: ElevatedButton.styleFrom(
-
                 primary: Colors.orange,
                 minimumSize: const Size.fromHeight(150), // NEW
-               // NEW
-
+                // NEW
               ),
               onPressed: () {},
               child: const Text(
@@ -46,25 +39,22 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
           ),
-
           SizedBox(
             height: 20.0,
           ),
-
           Container(
-            margin: EdgeInsets.only(left: 20.0,right: 20.0),
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
             child: SizedBox(
               width: 400.0,
               child: ElevatedButton(
-
                 style: ElevatedButton.styleFrom(
                   primary: Colors.orange,
                   minimumSize: const Size.fromHeight(150), // NEW
                   // NEW
-
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>UserLogin()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => UserLogin()));
                 },
                 child: const Text(
                   'User',
@@ -76,22 +66,19 @@ class _InputPageState extends State<InputPage> {
           SizedBox(
             height: 20.0,
           ),
-
           Container(
-            margin: EdgeInsets.only(left: 20.0,right: 20.0),
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
             child: SizedBox(
               width: 400.0,
               child: ElevatedButton(
-
                 style: ElevatedButton.styleFrom(
                   primary: Colors.orange,
                   minimumSize: const Size.fromHeight(150), // NEW
                   // NEW
-
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>comm()));
-
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => comm()));
                 },
                 child: const Text(
                   'Join the community',
@@ -103,18 +90,15 @@ class _InputPageState extends State<InputPage> {
           SizedBox(
             height: 20.0,
           ),
-
           Container(
-            margin: EdgeInsets.only(left: 20.0,right: 20.0),
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
             child: SizedBox(
               width: 400.0,
               child: ElevatedButton(
-
                 style: ElevatedButton.styleFrom(
                   primary: Colors.orange,
                   minimumSize: const Size.fromHeight(150), // NEW
                   // NEW
-
                 ),
                 onPressed: () {},
                 child: const Text(
@@ -124,8 +108,6 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
           ),
-
-          
         ],
       ),
     );

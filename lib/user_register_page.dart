@@ -8,8 +8,6 @@ import 'package:tri_nit/list.dart';
 import 'package:tri_nit/user_login.dart';
 
 class RegisterPage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +23,6 @@ class RegisterPage extends StatelessWidget {
 }
 
 class InputDetails extends StatefulWidget {
-
-
   @override
   State<InputDetails> createState() => _InputDetailsState();
 }
@@ -98,7 +94,6 @@ class _InputDetailsState extends State<InputDetails> {
             ),
             TextField(
               controller: cityController,
-              obscureText: true,
               decoration: InputDecoration(
                 hintText: 'City',
                 border: OutlineInputBorder(
@@ -111,9 +106,8 @@ class _InputDetailsState extends State<InputDetails> {
             ),
             TextField(
               controller: ngoController,
-              obscureText: true,
               decoration: InputDecoration(
-                hintText: 'Type of ngo interested in:',
+                hintText: 'Type of NGO Interested in',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -191,11 +185,14 @@ class _InputDetailsState extends State<InputDetails> {
             SizedBox(
               height: 20.0,
             ),
-            ElevatedButton(onPressed: () {
-              regiterUser();
-            }, child: Text(
-                'Register'
-            )),
+            ElevatedButton(
+                onPressed: () {
+                  regiterUser();
+                },
+                child: Text(
+                  'Register',
+                  style: TextStyle(fontSize: 25.0),
+                )),
           ],
         ),
       ),
@@ -207,23 +204,28 @@ class _InputDetailsState extends State<InputDetails> {
     User? user = await FirebaseAuth.instance.currentUser;
 
     try {
-      await auth.createUserWithEmailAndPassword(
-          email: emailController.text, password: passwordController.text).then((
-          signedInUser) =>
-      {
-        FirebaseFirestore.instance.collection("Users").doc(signedInUser.user?.uid).set({
-          'name': nameController.text,
-          'email': emailController.text,
-          'password': passwordController.text,
-          'confirmPassword': confirmController.text,
-          'city': cityController.text,
-          'typeOfNgo': ngoController.text,
-        }).then((signedInUser) =>
-        {
-          print("success"),
-          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>UserLogin()))
-        })
-      });
+      await auth
+          .createUserWithEmailAndPassword(
+              email: emailController.text, password: passwordController.text)
+          .then((signedInUser) => {
+                FirebaseFirestore.instance
+                    .collection("Users")
+                    .doc(signedInUser.user?.uid)
+                    .set({
+                  'name': nameController.text,
+                  'email': emailController.text,
+                  'password': passwordController.text,
+                  'confirmPassword': confirmController.text,
+                  'city': cityController.text,
+                  'typeOfNgo': ngoController.text,
+                }).then((signedInUser) => {
+                          print("success"),
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => UserLogin()))
+                        })
+              });
     } catch (e) {
       print(e);
     }

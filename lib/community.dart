@@ -38,9 +38,11 @@ class _commState extends State<comm> {
                     GestureDetector(
                       onTap: () {
                         setState(() async {
-                          const String url = 'https://discord.gg/nQwRAsEf';
+                          const String url =
+                              'https://www.discord.com/invite/nQwRAsEf';
                           if (await canLaunchUrlString(url)) {
-                            await launchUrlString(url);
+                            await launchUrlString(url,
+                                mode: LaunchMode.externalApplication);
                           }
                         });
                       },
@@ -85,7 +87,8 @@ class _commState extends State<comm> {
                     GestureDetector(
                       onTap: () {
                         setState(() async {
-                          const String url = 'https://discord.gg/4z2TQCyW';
+                          const String url =
+                              'https://www.discord.com/invite/4z2TQCyW';
                           if (await canLaunchUrlString(url)) {
                             await launchUrlString(url);
                           }
@@ -132,7 +135,8 @@ class _commState extends State<comm> {
                     GestureDetector(
                       onTap: () {
                         setState(() async {
-                          const String url = 'https://discord.gg/ZCab8uFf';
+                          const String url =
+                              'https://www.discord.com/invite/ZCab8uFf';
                           if (await canLaunchUrlString(url)) {
                             await launchUrlString(url);
                           }
@@ -179,7 +183,8 @@ class _commState extends State<comm> {
                     GestureDetector(
                       onTap: () {
                         setState(() async {
-                          const String url = 'https://discord.gg/H6z8fwMV';
+                          const String url =
+                              'https://www.discord.com/invite/H6z8fwMV';
                           if (await canLaunchUrlString(url)) {
                             await launchUrlString(url);
                           }
